@@ -6,10 +6,15 @@
 	<js-module name="outsystems-plugin-jedai" src="www/outsystems-plugin-jedai.js">
 		<clobbers target="cordova.plugins.outsystems-plugin-jedai" />
 	</js-module>
+	
+	<!-- Input Variables -->
 	<preference name="ANAGOG_API_KEY" default="" />
 	<preference name="ANAGOG_NOTIFICATION_ICON" default="" />
 	<preference name="ANAGOG_FOREGROUND_TITLE" default="" />
 	<preference name="ANAGOG_FOREGROUND_MESSAGE" default="" />
+	
+	<!-- Anagog Plugin Dependency -->
+	<dependency id="@anagog/cordova-jedai" />
 
 	<platform name="android">
 		<config-file target="AndroidManifest.xml" parent="/*">
