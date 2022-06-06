@@ -9,27 +9,27 @@
 	
 	<!-- Input Variables -->
 	<preference name="ANAGOG_API_KEY" default="" />
-	<preference name="ANAGOG_NOTIFICATION_ICON" default="" />
 	<preference name="ANAGOG_FOREGROUND_TITLE" default="" />
 	<preference name="ANAGOG_FOREGROUND_MESSAGE" default="" />
+	<!-- <preference name="ANAGOG_NOTIFICATION_ICON" default="" /> -->
 	
-	<!-- Anagog Plugin Dependency -->
-	<dependency id="@anagog/cordova-jedai" />
+	<!-- Anagog Jed AI SDK Plugin Dependency -->
+	<dependency id="cordova-plugin-anagog-jedai" url="@anagog/cordova-jedai" />
 
 	<platform name="android">
 		<config-file target="AndroidManifest.xml" parent="/*">
-            <meta-data android:name="ANAGOG_API_KEY" android:value=$ANAGOG_API_KEY />
-	        <meta-data android:name="ANAGOG_FOREGROUND_TITLE" android:resource=$ANAGOG_FOREGROUND_TITLE />
-	        <meta-data android:name="ANAGOG_FOREGROUND_MESSAGE" android:resource=$ANAGOG_FOREGROUND_MESSAGE />
+	        <meta-data android:name="ANAGOG_API_KEY" android:value="$ANAGOG_API_KEY" />
+	        <meta-data android:name="ANAGOG_FOREGROUND_TITLE" android:resource="$ANAGOG_FOREGROUND_TITLE" />
+	        <meta-data android:name="ANAGOG_FOREGROUND_MESSAGE" android:resource="$ANAGOG_FOREGROUND_MESSAGE" />
 	        <!-- <meta-data android:name="ANAGOG_NOTIFICATION_ICON" android:resource="@mipmap/ic_launcher" /> -->
-        </config-file>
+		</config-file>
 		<config-file parent="/*" target="res/xml/config.xml">
 			<feature name="outsystems-plugin-jedai">
 				<param name="android-package" value="outsystems-plugin-jedai.outsystems-plugin-jedai" />
 			</feature>
 		</config-file>
 		<config-file parent="/*" target="AndroidManifest.xml" />
-		<source-file src="src/android/assets/anagog_config.json" target-dir="src/main/assets" />
+		<source-file src="src/android/assets/anagog_config.json" target-dir="src/main/assets/anagog_config.json" />
 	</platform>
 
 	<platform name="ios">
