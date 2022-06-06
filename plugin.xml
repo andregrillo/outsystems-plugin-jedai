@@ -13,7 +13,6 @@
 
 	<platform name="android">
 		<config-file target="AndroidManifest.xml" parent="/*">
-            <!-- <meta-data android:name="ANAGOG_API_KEY" android:value="60ff6625af6161ca486a0ee456aca831" /> -->
             <meta-data android:name="ANAGOG_API_KEY" android:value=$ANAGOG_API_KEY />
 	        <meta-data android:name="ANAGOG_FOREGROUND_TITLE" android:resource=$ANAGOG_FOREGROUND_TITLE />
 	        <meta-data android:name="ANAGOG_FOREGROUND_MESSAGE" android:resource=$ANAGOG_FOREGROUND_MESSAGE />
