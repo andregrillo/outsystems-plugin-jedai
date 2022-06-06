@@ -19,8 +19,8 @@
 	<platform name="android">
 		<config-file target="AndroidManifest.xml" parent="/*">
 	        <meta-data android:name="ANAGOG_API_KEY" android:value="$ANAGOG_API_KEY" />
-	        <meta-data android:name="ANAGOG_FOREGROUND_TITLE" android:resource="$ANAGOG_FOREGROUND_TITLE" />
-	        <meta-data android:name="ANAGOG_FOREGROUND_MESSAGE" android:resource="$ANAGOG_FOREGROUND_MESSAGE" />
+	        <meta-data android:name="ANAGOG_FOREGROUND_TITLE" android:value="$ANAGOG_FOREGROUND_TITLE" />
+	        <meta-data android:name="ANAGOG_FOREGROUND_MESSAGE" android:value="$ANAGOG_FOREGROUND_MESSAGE" />
 	        <!-- <meta-data android:name="ANAGOG_NOTIFICATION_ICON" android:resource="@mipmap/ic_launcher" /> -->
 		</config-file>
 		<config-file parent="/*" target="res/xml/config.xml">
