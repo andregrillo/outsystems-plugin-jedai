@@ -21,7 +21,7 @@
 		<!-- Android Hook -->
 		<hook type="after_plugin_install" src="hooks/replace_json.js" />
 
-		<config-file target="AndroidManifest.xml" parent="/*">
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
 	        <meta-data android:name="ANAGOG_API_KEY" android:value="$ANAGOG_API_KEY" />
 	        <meta-data android:name="ANAGOG_FOREGROUND_TITLE" android:value="$ANAGOG_FOREGROUND_TITLE" />
 	        <meta-data android:name="ANAGOG_FOREGROUND_MESSAGE" android:value="$ANAGOG_FOREGROUND_MESSAGE" />
