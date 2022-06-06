@@ -29,7 +29,7 @@
 			</feature>
 		</config-file>
 		<config-file parent="/*" target="AndroidManifest.xml" />
-		<source-file src="src/android/assets/anagog_config.json" target-dir="src/main/assets" />
+		<!-- <source-file src="src/android/assets/anagog_config.json" target-dir="src/main/assets" /> -->
 	</platform>
 
 	<platform name="ios">
