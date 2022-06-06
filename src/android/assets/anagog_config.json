@@ -1,0 +1,14 @@
+{
+  "userDefinedStats": {
+    "StringUserDefinedStat" : "STRING",
+    "IntegerUserDefinedStat" : "INTEGER",
+    "DecimalUserDefinedStat" : "DECIMAL"
+  },
+  "notificationChannelId": "",
+  "foregroundChannelId": "",
+  "enableAudienceAnalytics" : true,
+  "foregroundMode" : "NEVER",
+  "enableLatestMs": true,
+  "enableCrashReports": true,
+  "enableInternalLog" : true
+}

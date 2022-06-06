@@ -6,10 +6,18 @@
 	<js-module name="outsystems-plugin-jedai" src="www/outsystems-plugin-jedai.js">
 		<clobbers target="cordova.plugins.outsystems-plugin-jedai" />
 	</js-module>
+	<preference name="ANAGOG_API_KEY" default="" />
+	<preference name="ANAGOG_NOTIFICATION_ICON" default="" />
+	<preference name="ANAGOG_FOREGROUND_TITLE" default="" />
+	<preference name="ANAGOG_FOREGROUND_MESSAGE" default="" />
 
 	<platform name="android">
 		<config-file target="AndroidManifest.xml" parent="/*">
-            <uses-permission android:name="android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"/>
+            <!-- <meta-data android:name="ANAGOG_API_KEY" android:value="60ff6625af6161ca486a0ee456aca831" /> -->
+            <meta-data android:name="ANAGOG_API_KEY" android:value=$ANAGOG_API_KEY />
+	        <meta-data android:name="ANAGOG_FOREGROUND_TITLE" android:resource=$ANAGOG_FOREGROUND_TITLE />
+	        <meta-data android:name="ANAGOG_FOREGROUND_MESSAGE" android:resource=$ANAGOG_FOREGROUND_MESSAGE />
+	        <!-- <meta-data android:name="ANAGOG_NOTIFICATION_ICON" android:resource="@mipmap/ic_launcher" /> -->
         </config-file>
 		<config-file parent="/*" target="res/xml/config.xml">
 			<feature name="outsystems-plugin-jedai">
@@ -17,6 +25,7 @@
 			</feature>
 		</config-file>
 		<config-file parent="/*" target="AndroidManifest.xml" />
+		<source-file src="src/android/assets/anagog_config.json" target-dir="src/main/assets" />
 	</platform>
 
 	<platform name="ios">
