@@ -1,0 +1,27 @@
+{
+  "name": "outsystems-plugin-jedai",
+  "version": "1.0.0",
+  "description": "Enables Anagog JedAI Plugin for OutSystems",
+  "cordova": {
+    "id": "outsystems-plugin-jedai",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andregrillo/outsystems-plugin-jedai.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "Andre Grillo - OutSystems",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andregrillo/outsystems-plugin-jedai/issues"
+  },
+  "homepage": "https://github.com/andregrillo/outsystems-plugin-jedai#readme"
+}

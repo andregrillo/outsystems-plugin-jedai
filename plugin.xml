@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="outsystems-plugin-jedai" version="1.0.0"
+	xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>outsystems-plugin-jedai</name>
+	<js-module name="outsystems-plugin-jedai" src="www/outsystems-plugin-jedai.js">
+		<clobbers target="cordova.plugins.outsystems-plugin-jedai" />
+	</js-module>
+
+	<platform name="android">
+		<config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"/>
+        </config-file>
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="outsystems-plugin-jedai">
+				<param name="android-package" value="outsystems-plugin-jedai.outsystems-plugin-jedai" />
+			</feature>
+		</config-file>
+		<config-file parent="/*" target="AndroidManifest.xml" />
+	</platform>
+
+	<platform name="ios">
+		<config-file parent="/*" target="config.xml">
+			<feature name="outsystems-plugin-jedai">
+				<param name="ios-package" value="outsystems-plugin-jedai" />
+			</feature>
+		</config-file>
+	</platform>
+</plugin>
