@@ -13,7 +13,7 @@
 	<preference name="ANAGOG_FOREGROUND_MESSAGE" default="" />
 	<!-- <preference name="ANAGOG_NOTIFICATION_ICON" default="" /> -->
 	
-	<!-- Anagog Jed AI SDK Plugin Dependency -->
+	<!-- Anagog Jed AI SDK Plugin Dependency  -->
 	<dependency id="cordova-plugin-anagog-jedai" url="@anagog/cordova-jedai" />
 
 	<platform name="android">
@@ -33,10 +33,13 @@
 			</feature>
 		</config-file>
 		<config-file parent="/*" target="AndroidManifest.xml" />
-		<!-- <source-file src="src/android/assets/anagog_config.json" target-dir="src/main/assets" /> -->
+
 	</platform>
 
 	<platform name="ios">
+		<!-- iOS Hook to include license -->
+		<hook type="after_plugin_install" src="hooks/iOS_add_license.js" /> 
+
 		<config-file parent="/*" target="config.xml">
 			<feature name="outsystems-plugin-jedai">
 				<param name="ios-package" value="outsystems-plugin-jedai" />
