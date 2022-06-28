@@ -39,7 +39,9 @@
 
 	<platform name="ios">
 		<!-- iOS Hook to include license -->
-		<hook type="after_plugin_install" src="hooks/iOS_add_license.js" /> 
+		<config-file target="*-Info.plist" parent="ANAGOG_API_KEY">
+	        <string>$ANAGOG_IOS_API_KEY</string>
+		</config-file>
 
 		<config-file parent="/*" target="config.xml">
 			<feature name="outsystems-plugin-jedai">
