@@ -19,7 +19,7 @@ module.exports = function(context) {
 
     var license;
     for (const arg of args) {  
-      if (arg.includes('ANAGOG_API_KEY')){
+      if (arg.includes('ANAGOG_IOS_API_KEY')){
         var stringArray = arg.split("=");
         license = stringArray.slice(-1).pop();
       }
@@ -42,28 +42,17 @@ module.exports = function(context) {
           throw new Error('>>> Unable to read JemaWrapper.swift: ' + err);
         }
         
-        var result = data;
-        var shouldBeSaved = false;
-
-        if (!data.includes("UseModernBuildSystem")){
-          shouldBeSaved = true;
-          result = data.replace(/let API_KEY = ""/g, 'let API_KEY = "' + license + '"');
-        } else {
-          console.log(">>> JemaWrapper.swift already modified <<<");
-        }
-
-        if (shouldBeSaved){
-          fs.writeFile(swiftFile, result, 'utf8', function (err) {
-          if (err) 
-            {throw new Error('>>> Unable to write into JemaWrapper.swift: ' + err);}
-          else 
-            {console.log(">>> JemaWrapper.swift edited successfuly <<<");}
+        var result = data.replace(/let API_KEY = ""/g, 'let API_KEY = "' + license + '"');
+        
+        fs.writeFile(swiftFile, result, 'utf8', function (err) {
+        if (err) 
+          {throw new Error('>>> Unable to write into JemaWrapper.swift: ' + err);}
+        else 
+          {console.log(">>> JemaWrapper.swift edited successfuly <<<");}
         });
-        }
-
       });
     } else {
-        throw new Error(">>> WARNING: JemaWrapper.swift was not found. The build phase may not finish successfuly");
+        throw new Error(">>> WARNING: JemaWrapper.swift was not found <<<");
     }
 }
 
