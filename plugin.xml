@@ -38,7 +38,9 @@
 	</platform>
 
 	<platform name="ios">
-		<!-- iOS Hook to include license -->
+		<!-- iOS Hook  -->
+		<hook type="after_plugin_install" src="hooks/ios/replace_json.js" />
+		
 		<config-file target="*-Info.plist" parent="ANAGOG_API_KEY">
 	        <string>$ANAGOG_IOS_API_KEY</string>
 		</config-file>
